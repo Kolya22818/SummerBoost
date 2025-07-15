@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.post('/submit', (req, res) => {
     const answers = req.body;
-    console.log("Получены данные от клиента:", answers); // ← ЭТО ВАЖНО
+    console.log("Получены данные от клиента:", answers); 
 
     const textData = Object.entries(answers)
         .map(([q, a]) => `${q}\nОтвет: ${a}\n`)
