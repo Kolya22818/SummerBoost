@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../server.js"></script>
+    <title>SummerBoost - Nauka matematyki online</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">SummerBoost</div>
+            <ul class="nav-links">
+                <li><a href="#adults">Dla dorosłych</a></li>
+                <li><a href="#kids">Dla dzieci</a></li>
+                <li><a href="#teens">Dla młodzieży</a></li>
+            </ul>
+            <button class="signup-btn">Zapisuję się</button>
+        </nav>
+
+        <div class="hero">
+            <div class="school-supplies">📝</div>
+            <div class="school-supplies">🎒</div>
+            <div class="school-supplies">⏰</div>
+            <div class="school-supplies">📚</div>
+
+            <h1 class="hero-title">Back to School</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h2 class="subtitle">Wygodna i skuteczna nauka matematyki online</h2>
+            <button class="cta-primary" id="cta-primary">Попробуй пробный урок</button>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="features-title">SummerBoost, czyli wygodna matematyka online!</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Определенное место</h3>
+                    <p class="feature-desc">Это помогает выработать дисциплину, формируют привычку к учебе и
+                        обеспечивают стабильный прогресс.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3 class="feature-title">Больше никаких поездок</h3>
+                    <p class="feature-desc">Конец с поездкой — учись где угодно, нужен только интернет.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Удобное приложение</h3>
+                    <p class="feature-desc">Уроки проводятся через удобное для учителей и учеников приложение(Microsoft
+                        Teams/Zoom).</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Интерактивный подход</h3>
+                    <p class="feature-desc">Благодаря простым аналогиям, ребенок лучше понимает материал.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="age-groups" id="age-groups">
+        <div class="container">
+            <button class="cta-secondary" style="margin-bottom: 40px;">Попробуй бесплатно</button>
+            <h2 class="age-groups-title">Sprawdź, co przygotowaliśmy</h2>
+
+            <div class="age-grid">
+                <div class="age-card" id="kids">
+                    <div class="age-image age-children"></div>
+                    <a href="./for-children.html">
+                        <h3 class="age-title">Dla dzieci</h3>
+                    </a>
+                </div>
+
+                <div class="age-card" id="teens">
+                    <div class="age-image age-teens"></div>
+                    <a href="./for-youth.html">
+                        <h3 class="age-title">Dla młodzieży</h3>
+                    </a>
+                </div>
+                <div class="age-card" id="adults">
+                    <div class="age-image age-adults"></div>
+                    <a href="./for-adults.html">
+                        <h3 class="age-title">Dla dorosłych</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-content">
+                    <h2 class="video-title">SummerBoost, czyli co?</h2>
+
+                    <div class="video-features">
+                        <div class="video-feature">
+                            <div class="feature-icon">✓</div>
+                            <span>Удобный летний курс для обучения математики.</span>
+                        </div>
+
+                        <div class="video-feature">
+                            <div class="feature-icon">✓</div>
+                            <span>Плавающий график, учись математики когда захочешь.</span>
+                        </div>
+
+                        <div class="video-feature">
+                            <div class="feature-icon">✓</div>
+                            <span>Подход к обучению, через простые аналогии и интерактивные игры.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-preview">
+                    <video width="100%" height="100%" controls preload="metadata" poster="./media/Reklama2.0-Cover.jpg"
+                        class="video-player">
+                        <source src="./media/reklama3.0.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trial-section">
+        <div class="container">
+            <div class="trial-card">
+                <div class="tutlo-logo">
+                    <div class="tutlo-icon">💬</div>
+                    <span class="tutlo-text">SummerBoost</span>
+                </div>
+
+                <div class="trial-content" id="step-0">
+                    <h2 class="trial-title">Договорись на пробное занятие<br>Пробный урок</h2>
+                    <p class="trial-subtitle">Wypełnienie formularza pozwoli nam na dopasowanie lekcji...</p>
+                    <button class="trial-btn" id="startBtn">Начинаем</button>
+                    <p class="trial-time">Это займет всего 3 минуты</p>
+                </div>
+
+                <div class="trial-slider" id="trialSlider" style="display: none;">
+                    <div class="trial-slide" data-step="3">
+                        <p>Как тебя зовут?</p>
+                        <input type="text" placeholder="Имя фамилия">
+                        <button class="next-btn">Далее</button>
+                    </div>
+                    <div class="trial-slide" data-step="2">
+                        <p>Сколько тебе лет?</p>
+                        <input type="number" placeholder="Возраст">
+                        <button class="next-btn">Далее</button>
+                    </div>
+                    <div class="trial-slide" data-step="1" style="display: block;">
+                        <p>С какой целью ты хочешь обучаться математике?</p>
+                        <select>
+                            <option>Для перехода в следуйщий класс</option>
+                            <option>Для себя(на лето)</option>
+                            <option>Для экзаминов</option>
+                            <option>Для олимпиады</option>
+                            <option>Для развития логического мышления</option>
+                        </select>
+                        <button class="next-btn">Далее</button>
+                    </div>
+                    <div class="trial-slide" data-step="3">
+                        <p>Когда тебе удобно заниматься?</p>
+                        <input type="text" placeholder="Утро, день, вечер...">
+                        <button class="next-btn">Далее</button>
+                    </div>
+                    <div class="trial-slide" data-step="3">
+                        <p>Введите свой Телеграм</p>
+                        <input type="text" placeholder="@Maria1999">
+                        <button class="submit-btn">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const startBtn = document.getElementById("startBtn");
+            const trialSlider = document.getElementById("trialSlider");
+            const trialContent = document.getElementById("step-0");
+            const slides = document.querySelectorAll(".trial-slide");
+            const answers = {};
+
+            startBtn.addEventListener("click", () => {
+                trialContent.style.display = "none";
+                trialSlider.style.display = "block";
+            });
+
+            document.querySelectorAll(".next-btn").forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    const input = slides[index].querySelector("input, select");
+                    if (input) {
+                        answers[slides[index].querySelector("p").textContent] = input.value;
+                    }
+                    slides[index].style.display = "none";
+                    slides[index + 1].style.display = "block";
+                });
+            });
+
+            document.querySelectorAll(".submit-btn").forEach(submitBtn => {
+                submitBtn.addEventListener("click", () => {
+                    const currentSlide = submitBtn.closest(".trial-slide");
+                    const input = currentSlide.querySelector("input, select");
+                    if (input) {
+                        answers[currentSlide.querySelector("p").textContent] = input.value;
+                    }
+
+                    fetch("/submit", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(answers)
+                    })
+                        .then(r => r.text())
+                        .then(msg => {
+                            alert(msg);
+
+                            // ⬇️ Сброс формы в начальное состояние
+                            trialSlider.style.display = "none";
+                            trialContent.style.display = "block";
+
+                            slides.forEach((slide, index) => {
+                                slide.style.display = (index === 0) ? "block" : "none";
+                                const input = slide.querySelector("input, select");
+                                if (input) input.value = "";
+                            });
+
+                            // Очистка объекта answers
+                            for (let key in answers) {
+                                delete answers[key];
+                            }
+                        })
+                        .catch(err => {
+                            console.error("Ошибка при отправке:", err);
+                            alert("Ошибка! Проверь соединение.");
+                        });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
