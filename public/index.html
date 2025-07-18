@@ -134,8 +134,7 @@
             </div>
         </div>
     </section>
-
-    <section class="trial-section">
+    <section id="formularz" class="trial-section">
         <div class="container">
             <div class="trial-card">
                 <div class="tutlo-logo">
@@ -143,41 +142,47 @@
                     <span class="tutlo-text">SummerBoost</span>
                 </div>
 
-                <div class="trial-content" id="step-1">
+                <!-- Стартовая страница -->
+                <div class="trial-content" id="step-0">
                     <h2 class="trial-title">Договорись на пробное занятие<br>Пробный урок</h2>
                     <p class="trial-subtitle">Wypełnienie formularza pozwoli nam na dopasowanie lekcji...</p>
                     <button class="trial-btn" id="startBtn">Начинаем</button>
                     <p class="trial-time">Это займет всего 3 минуты</p>
                 </div>
 
-                <div class="trial-slider" id="trialSlider" style="display: none;">
-                    <div class="trial-slide" data-step="2" id="step-2">
+                <!-- Слайды -->
+                <div id="trialSlider" style="display: none;">
+                    <div class="trial-slide" data-step="0" style="display: block;">
                         <p>Как тебя зовут?</p>
                         <input type="text" placeholder="Имя фамилия">
                         <button class="next-btn">Далее</button>
                     </div>
-                    <div class="trial-slide" data-step="3" id="step-3">
+
+                    <div class="trial-slide" data-step="1" style="display: none;">
                         <p>Сколько тебе лет?</p>
                         <input type="number" placeholder="Возраст">
                         <button class="next-btn">Далее</button>
                     </div>
-                    <div class="trial-slide" data-step="4" id="step-4" style="display: block;">
+
+                    <div class="trial-slide" data-step="2" style="display: none;">
                         <p>С какой целью ты хочешь обучаться математике?</p>
                         <select>
-                            <option>Для перехода в следуйщий класс</option>
-                            <option>Для себя(на лето)</option>
-                            <option>Для экзаминов</option>
+                            <option>Для перехода в следующий класс</option>
+                            <option>Для себя (на лето)</option>
+                            <option>Для экзаменов</option>
                             <option>Для олимпиады</option>
                             <option>Для развития логического мышления</option>
                         </select>
                         <button class="next-btn">Далее</button>
                     </div>
-                    <div class="trial-slide" data-step="5" id="step-5">
+
+                    <div class="trial-slide" data-step="3" style="display: none;">
                         <p>Когда тебе удобно заниматься?</p>
                         <input type="text" placeholder="Утро, день, вечер...">
                         <button class="next-btn">Далее</button>
                     </div>
-                    <div class="trial-slide" data-step="6" id="step-6">
+
+                    <div class="trial-slide" data-step="4" style="display: none;">
                         <p>Введите свой Телеграм</p>
                         <input type="text" placeholder="@Maria1999">
                         <button class="submit-btn">Отправить</button>
@@ -197,6 +202,7 @@
             startBtn.addEventListener("click", () => {
                 trialContent.style.display = "none";
                 trialSlider.style.display = "block";
+                slides[0].style.display = "block";
             });
 
             document.querySelectorAll(".next-btn").forEach((btn, index) => {
@@ -206,7 +212,9 @@
                         answers[slides[index].querySelector("p").textContent] = input.value;
                     }
                     slides[index].style.display = "none";
-                    slides[index + 1].style.display = "block";
+                    if (slides[index + 1]) {
+                        slides[index + 1].style.display = "block";
+                    }
                 });
             });
 
@@ -227,17 +235,16 @@
                         .then(msg => {
                             alert(msg);
 
-                            // ⬇️ Сброс формы в начальное состояние
+                            // Сброс формы
                             trialSlider.style.display = "none";
                             trialContent.style.display = "block";
 
-                            slides.forEach((slide, index) => {
-                                slide.style.display = (index === 0) ? "block" : "none";
+                            slides.forEach((slide, i) => {
+                                slide.style.display = (i === 0) ? "block" : "none";
                                 const input = slide.querySelector("input, select");
                                 if (input) input.value = "";
                             });
 
-                            // Очистка объекта answers
                             for (let key in answers) {
                                 delete answers[key];
                             }
@@ -249,8 +256,16 @@
                 });
             });
         });
+        document.querySelector(".cta-primary").addEventListener("click", () => {
+            document.getElementById("formularz").scrollIntoView({ behavior: "smooth" });
+        });
+        document.querySelector(".signup-btn").addEventListener("click", () => {
+            document.getElementById("formularz").scrollIntoView({ behavior: "smooth" });
+        });
+        document.querySelector(".cta-secondary").addEventListener("click", () => {
+            document.getElementById("formularz").scrollIntoView({ behavior: "smooth" });
+        });
     </script>
-
 </body>
 
 </html>
